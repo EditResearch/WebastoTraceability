@@ -1,1 +1,5 @@
-.cache/main.o: app/main.c
+.cache/main.o: app/main.c app/../src/view.h app/../src/ui.h
+.cache/controller.o: src/controller.c src/controller.h
+.cache/model.o: src/model.c src/model.h
+.cache/ui.o: src/ui.c src/ui.h
+.cache/view.o: src/view.c src/view.h src/ui.h
