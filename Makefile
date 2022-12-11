@@ -1,6 +1,6 @@
 CC=gcc
-CFLAGS=-Wall -Wextra -pedantic -std=c18 -O2 $$(pkg-config --cflags gtk+-3.0 sqlite3)
-LIBS=$$(pkg-config --libs gtk+-3.0 sqlite3) -lendian
+CFLAGS=-Wall -Wextra -pedantic -std=c18 -O2 $$(pkg-config --cflags gtk+-3.0 sqlite3) 
+LIBS=$$(pkg-config --libs gtk+-3.0 sqlite3) -lendian -llog
 
 TARGET=traceability
 CACHE=.cache

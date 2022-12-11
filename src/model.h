@@ -2,10 +2,22 @@
 #define _MODEL_H_ 
 
 #include <time.h>
+#include <sqlite3.h>
+#include <log.h>
+
+
+typedef struct
+{
+    size_t length;
+    void ** array;
+}Vector;
+
 
 typedef struct
 {
     time_t timeout_logout;
+    sqlite3 * db;
+    Log * log;
 }Model;
 
 #define Model(...)(Model){__VA_LIST__}
@@ -36,7 +48,16 @@ typedef struct
 #define E_Model_Left(T)(E_Model){.either = E_Model_L, .left = T}
 
 
+
 E_Model
 model_init(void);
+
+
+Vector *
+model_get_table_list(Model * self);
+
+
+void
+model_finalize(Model * self);
 
 #endif
