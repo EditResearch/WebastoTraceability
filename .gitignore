@@ -2,6 +2,8 @@
 *.d
 .cache
 *.swp
+log
+*.log
 
 
 # Object files
