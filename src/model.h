@@ -15,9 +15,11 @@ typedef struct
 
 typedef struct
 {
-    time_t timeout_logout;
+    time_t logout_timer;
     sqlite3 * db;
     Log * log;
+    
+    char logged_user[64];
 }Model;
 
 #define Model(...)(Model){__VA_LIST__}
@@ -56,6 +58,9 @@ model_init(void);
 Vector *
 model_get_table_list(Model * self);
 
+
+Vector *
+model_get_table_columns(Model * self, char * table);
 
 void
 model_finalize(Model * self);

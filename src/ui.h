@@ -51,15 +51,15 @@ ui_build(char * glade);
 
 
 void
-ui_set_visible_login_page(GtkWidget * widget, Ui * self);
+ui_set_visible_login_page(Ui * self);
 
 
 void
-ui_set_visible_passwd_page(GtkWidget * widget, Ui * self);
+ui_set_visible_passwd_page(Ui * self);
 
 
 void 
-ui_set_visible_main_page(GtkWidget * widget, Ui * self);
+ui_set_visible_main_page(Ui * self);
 
 
 #endif

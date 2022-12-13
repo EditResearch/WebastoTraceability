@@ -34,24 +34,21 @@ ui_build(char * glade)
 
 
 void
-ui_set_visible_login_page(GtkWidget * widget, Ui * self)
+ui_set_visible_login_page(Ui * self)
 {
-    (void) widget;
     gtk_stack_set_visible_child_name(GTK_STACK(self->page_stack), "page_login");
 }
 
 
 void
-ui_set_visible_passwd_page(GtkWidget * widget, Ui * self)
+ui_set_visible_passwd_page(Ui * self)
 {
-    (void) widget;
     gtk_stack_set_visible_child_name(GTK_STACK(self->page_stack), "page_passwd");
 }
 
 
 void 
-ui_set_visible_main_page(GtkWidget * widget, Ui * self)
+ui_set_visible_main_page(Ui * self)
 {
-    (void) widget;
     gtk_stack_set_visible_child_name(GTK_STACK(self->page_stack), "page_main");
 }
